@@ -1,4 +1,4 @@
-package sumof1000primes;
+package src.sumof1000primes;
 
 public class Main {
 
