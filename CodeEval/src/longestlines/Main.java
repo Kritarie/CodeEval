@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.Comparator;
 import java.util.TreeSet;
 
+//https://www.codeeval.com/open_challenge_scores/?pkbid=2
+
 public class Main {
 	public static void main (String[] args) throws IOException {
 		File file = new File(args[0]);

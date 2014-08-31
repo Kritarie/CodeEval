@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+//https://www.codeeval.com/open_challenges/122/
+
 public class Main {
 
 	public static void main(String[] args) throws IOException {

@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//https://www.codeeval.com/open_challenges/111/
+
 public class Main {
 
 	public static void main(String[] args) throws IOException {

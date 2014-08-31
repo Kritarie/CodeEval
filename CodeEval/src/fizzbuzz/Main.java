@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+//https://www.codeeval.com/open_challenges/1/
+
 public class Main {
 	public static void main (String[] args) throws NumberFormatException, IOException {
 		File file = new File(args[0]);

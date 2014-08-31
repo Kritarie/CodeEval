@@ -1,5 +1,7 @@
 package sumof1000primes;
 
+//https://www.codeeval.com/open_challenges/4/
+
 public class Main {
 
 	public static void main(String[] args) {
