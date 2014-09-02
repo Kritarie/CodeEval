@@ -1,5 +1,7 @@
 package compressedsequence;
 
+//https://www.codeeval.com/open_challenges/128/
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
