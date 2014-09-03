@@ -7,9 +7,15 @@ public class Main {
 	public static void main(String[] args) {
 		
 		for (int i = 1000; i > 0; i--) {
-			if (isPrime(i) && isPalindrome(i)) {
-				System.out.print(i);
-				break;
+//			if (isPrime(i) && altIsPalindrome(i)) {
+//				System.out.print(i);
+//				break;
+//			}
+			if (isPrime(i)) {
+				if (altIsPalindrome(i)) {
+					System.out.println(i);
+					break;
+				}
 			}
 		}
 	}
@@ -29,5 +35,14 @@ public class Main {
 			return true;
 		}
 		return false;
+	}
+	
+	static boolean altIsPalindrome(int num) {
+		String str = String.valueOf(num);
+		int n = str.length();
+		for (int i = 0; i < n/2; i++) {
+			if (str.charAt(i) != str.charAt(n - 1 - i)) return false;
+		}
+		return true;
 	}
 }
