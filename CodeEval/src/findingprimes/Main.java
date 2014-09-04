@@ -26,7 +26,6 @@ public class Main {
 		}
 		
 		in.close();
-		System.out.print("\n");
 	}
 	
 	static boolean isPrime(int num) {
