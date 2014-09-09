@@ -21,9 +21,12 @@ public class Main {
 		}
 		
 		previous = line.indexOf("|");
+		System.out.println(line);
 		
 		while ((line = in.readLine()) != null) {
+			//Check for checkpoint (heh)
 			if (line.contains("C")) {
+				//Determine direction
 				if (line.indexOf("C") > previous) {
 					previous = line.indexOf("C");
 					line = line.replace("C", "\\");
@@ -36,6 +39,7 @@ public class Main {
 				}
 				//line does not contain checkpoint, must contain gate
 			} else {
+				//Determine direction
 				if (line.indexOf("_") > previous) {
 					previous = line.indexOf("_");
 					line = line.replace("_", "\\");
