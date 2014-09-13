@@ -13,8 +13,9 @@ public class Main {
 		File file = new File(args[0]);
 		Scanner in = new Scanner(new FileReader(file));
 		int num;
+		StringBuilder sb;
 		while (in.hasNext()) {
-			StringBuilder sb = new StringBuilder();
+			sb = new StringBuilder();
 			num = in.nextInt();
 			
 			//Check for M = 1000
@@ -24,7 +25,7 @@ public class Main {
 			}
 			
 			//Check for CM = 900
-			if (num >= 900) {
+			while (num >= 900) {
 				sb.append("CM");
 				num = num - 900;
 			}
@@ -35,6 +36,12 @@ public class Main {
 				num = num - 500;
 			}
 			
+			//Check for CD = 40
+			while (num >= 400) {
+				sb.append("CD");
+				num = num - 400;
+			}
+			
 			//Check for C = 100
 			while (num >= 100) {
 				sb.append("C");
@@ -42,19 +49,19 @@ public class Main {
 			}
 			
 			//Check for XC = 90
-			if (num >= 90) {
+			while (num >= 90) {
 				sb.append("XC");
 				num = num - 90;
 			}
 			
 			//Check for L = 50
-			if (num >= 50) {
+			while (num >= 50) {
 				sb.append("L");
 				num = num - 50;
 			}
 			
 			//Check for XL = 40
-			if (num >= 40) {
+			while (num >= 40) {
 				sb.append("XL");
 				num = num - 40;
 			}
@@ -66,19 +73,19 @@ public class Main {
 			}
 			
 			//Check for IX = 9
-			if (num == 9) {
+			while (num == 9) {
 				sb.append("IX");
 				num = num - 9;
 			}
 			
 			//Check for V = 5
-			if (num >= 5) {
+			while (num >= 5) {
 				sb.append("V");
 				num = num - 5;
 			}
 			
 			//Check for IV = 4
-			if (num == 4) {
+			while (num == 4) {
 				sb.append("IV");
 				num = num - 4;
 			}
