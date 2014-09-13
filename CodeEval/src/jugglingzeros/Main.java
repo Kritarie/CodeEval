@@ -36,8 +36,8 @@ public class Main {
 		in.close();
 	}
 
-	private static int toDecimal(String line) {
-		int num = 0;
+	private static long toDecimal(String line) {
+		long num = 0;
 		for (int i = 0; i < line.length(); i++) {
 			num += (Character.getNumericValue(line.charAt(line.length() - 1 - i)) * Math.pow(2, i));
 		}
