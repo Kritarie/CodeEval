@@ -16,8 +16,6 @@ public class Main {
 		BufferedReader in = new BufferedReader(new FileReader(file));
 		String line;
 		int num, romanNum, sum;
-		int previousRoman = Integer.MAX_VALUE;
-		int previousNum = 0;
 		
 		Map<Character, Integer> map = new HashMap<Character, Integer>();
 		map.put('I', 1);
@@ -34,16 +32,17 @@ public class Main {
 				num = Character.getNumericValue(line.charAt(i));
 				romanNum = map.get(line.charAt(i+1));
 				
-				//Add this pair by default
-				sum += num*romanNum;
-				
-				//Checks if the previous pair should be subtracted instead
-				if (romanNum > previousRoman) {
-					sum -= 2*previousNum*previousRoman;
+				//Look ahead to check if add or subtract
+				try {
+					if (map.get(line.charAt(i+3)) > romanNum) {
+						sum -= num*romanNum;
+					} else {
+						sum += num*romanNum;
+					}
+				} catch (StringIndexOutOfBoundsException e) {
+					//If i+3 is out of bounds, this is our last pair, so add
+					sum += num*romanNum;
 				}
-				
-				previousRoman = romanNum;
-				previousNum = num;
 			}
 			System.out.println(sum);
 		}
